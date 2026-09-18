@@ -11,15 +11,27 @@ public class SmartTv extends SmartDevices implements Switchable, Connectable {
         this.connection = connection;
     }
 
-    int getChannel() { return channel; }
-    int getVolume() { return volume; }
-    public connectionType getConnection() { return connection; }
+    int getChannel() {
+        return channel;
+    }
+
+    int getVolume() {
+        return volume;
+    }
+
+    public connectionType getConnection() {
+        return connection;
+    }
 
     @Override
-    public void turnOn() { setStatus("Menyala"); }
+    public void turnOn() {
+        setStatus("Menyala");
+    }
 
     @Override
-    public void turnOff() { setStatus("Mati"); }
+    public void turnOff() {
+        setStatus("Mati");
+    }
 
     @Override
     public void connect(connectionType koneksi) {
@@ -34,7 +46,7 @@ public class SmartTv extends SmartDevices implements Switchable, Connectable {
     @Override
     public String getDeviceDetails() {
         return "Smart TV [" + getNama() + "]"
-                + " *ID: " + getId()  + " - Daya: " + getDaya() + "W" + " |Status: " + getStatus() + " | Koneksi: "
+                + " *ID: " + getId() + " - Daya: " + getDaya() + "W" + " |Status: " + getStatus() + " | Koneksi: "
                 + connection + " | Channel: " + channel + " | Volume:" + volume;
     }
 }

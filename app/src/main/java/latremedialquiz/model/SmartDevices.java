@@ -13,11 +13,25 @@ public abstract class SmartDevices {
         this.status = "Mati";
     }
 
-    public String getId() { return id; }
-    public String getNama() { return nama; }
-    public double getDaya() { return daya; }
-    public String getStatus() { return status; }
-    public void setStatus(String status) { this.status = status; }
+    public String getId() {
+        return id;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public double getDaya() {
+        return daya;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public abstract String getDeviceDetails();
 }
